@@ -1,9 +1,12 @@
 
 public class Persona {
+	
+	final char sexoDef='H';
+	
 	String nombre="";
 	int edad=0;
 	String dni;
-	char sexo='H';
+	char sexo=sexoDef;
 	double peso=0;
 	double altura=0;
 	
