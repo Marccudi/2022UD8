@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class Password {
 
@@ -5,10 +6,12 @@ public class Password {
 	String pass;
 	
 	public Password() {
+		crearPass(longitud);
 	}
 	
 	public Password(int longitud) {
 		this.longitud = longitud;
+		crearPass(longitud);
 	}
 
 	public int getLongitud() {
@@ -27,7 +30,16 @@ public class Password {
 		this.pass = pass;
 	}
 
-
+	public void crearPass(int longituda){
+	String passw="";
 	
-	
+	int limiteIzq=97;//Letra a
+	int limiteDer=122;//Letra z
+    Random random = new Random();
+    String generatedString = random.ints(limiteIzq, limiteDer + 1)
+    	      .limit(longituda)
+    	      .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+    	      .toString();
+    this.pass = generatedString;
+	}
 }
