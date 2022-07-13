@@ -31,7 +31,6 @@ public class Password {
 	}
 
 	public void crearPass(int longituda){
-	String passw="";
 	
 	int limiteIzq=97;//Letra a
 	int limiteDer=122;//Letra z
